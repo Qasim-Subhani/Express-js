@@ -100,7 +100,7 @@ if (app.get("env") === "development") {
 
 var port = process.env.PORT || 8090;
 app.listen(port, () => {
-  // console.log(`listing on port ${port}`);
+  console.log(`listing on port ${port}`);
 });
 
 //------------------------------------------------------------------//
