@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "./node_modules/.bin/netlify-lambda serve src",
-    "build":"./node_modules/.bin/netlify-lambda build src"
+    "build": "./node_modules/.bin/netlify-lambda build src"
   },
   "dependencies": {
     "body-parser": "~1.19.0",
@@ -17,6 +17,7 @@
     "git": "^0.1.5",
     "helmet": "^4.6.0",
     "joi": "^13.1.0",
+    "mongodb": "^3.6.9",
     "mongoose": "^5.12.14",
     "morgan": "^1.10.0",
     "mssql": "^7.1.3",

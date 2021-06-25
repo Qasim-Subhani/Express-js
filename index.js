@@ -59,13 +59,13 @@ const debug = require("debug")("app:debug");
 const courses = require("./routes/courses");
 const student = require("./routes/student");
 const home = require("./routes/home");
-const mongoose = require("mongoose");
 const logger = require("./middleware/logger");
 //configuration
 // console.log("Application name --> " + config.get("name"));
 // console.log("Server  name--> " + config.get("mail.host"));
 // console.log("Server  Password--> " + config.get("mail.password"));
 
+const mongoose = require("mongoose");
 mongoose
   .connect("mongodb://localhost/playGround")
   .then(() => console.log("connected to mongodb...!"))
