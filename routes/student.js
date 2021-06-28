@@ -8,9 +8,8 @@ const getStudent = async () => {
   //   const student = await Student.find();
 
   //populate method is used to combine two documents
-  const student = await Student.find()
-    .populate("course", "name author -_id") //here - sign is used to exclude the property
-    .select("name course");
+  const student = await Student.find().populate("course", "name author -_id"); //here - sign is used to exclude the property
+
   return student;
 };
 

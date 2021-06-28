@@ -67,7 +67,9 @@ const logger = require("./middleware/logger");
 
 const mongoose = require("mongoose");
 mongoose
-  .connect("mongodb://localhost/playGround")
+  .connect(
+    "mongodb+srv://qasimSubhani:12345@cluster0.bi9dy.mongodb.net/database01?retryWrites=true&w=majority"
+  )
   .then(() => console.log("connected to mongodb...!"))
   .catch((err) => console.log("could not connect to Db", err));
 
@@ -79,7 +81,7 @@ app.set("view engine", "pug");
 app.set("views", "./views");
 
 app.use(logger);
-app.use("/api/courses", courses);
+// app.use("/api/courses", courses);
 app.use("/api/student", student);
 app.use("/", home);
 
