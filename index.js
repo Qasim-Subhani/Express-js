@@ -81,7 +81,7 @@ app.set("view engine", "pug");
 app.set("views", "./views");
 
 app.use(logger);
-// app.use("/api/courses", courses);
+app.use("/api/courses", courses);
 app.use("/api/student", student);
 app.use("/", home);
 
