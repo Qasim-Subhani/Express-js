@@ -90,7 +90,7 @@ router.put("/:id", async (req, res) => {
     if (course.length === 0) {
       return res.status(404).send({
         success: false,
-        messege: "Course not found In the DataBase",
+        messege: "Course not found In the DataBase11",
       });
     }
     const { error } = validate(req.body);
@@ -109,6 +109,7 @@ router.put("/:id", async (req, res) => {
       tags: req.body.tags,
       isPublished: req.body.isPublished,
       price: req.body.price,
+      category: req.body.category,
     });
     //saving into DB
     const result = await course.save();
@@ -118,7 +119,8 @@ router.put("/:id", async (req, res) => {
   } catch (error) {
     return res.status(404).send({
       success: false,
-      messege: "Course not found In the DataBase",
+      messege: "Course not found In the DataBase22",
+      content: error.message,
     });
   }
 });
